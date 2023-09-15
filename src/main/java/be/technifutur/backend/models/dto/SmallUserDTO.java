@@ -9,15 +9,14 @@ import lombok.Data;
 public class SmallUserDTO {
     private Long id;
     private String pseudo;
-    private String email;
+
 
     public static SmallUserDTO toDTO(User entity){
         if(entity == null)
             return null;
         return SmallUserDTO.builder()
                 .id(entity.getId())
-                .pseudo(entity.getPseudo())
-                .email(entity.getEmail())
+                .pseudo(entity.getUsername())
                 .build();
     }
 }

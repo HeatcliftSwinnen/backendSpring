@@ -43,14 +43,19 @@ public class GameController {
     }
 
     @PatchMapping("/{id:[0-9]+}/money")
-    public ResponseEntity<?>updateMoney(@PathVariable Long id,@RequestBody double price){
+    public ResponseEntity<?> updateMoney(@PathVariable Long id,@RequestBody double price){
         gameService.updateMoneyPrice(id, price);
         return ResponseEntity.noContent().build();
     }
 
     @PatchMapping("/{id:[0-9]+}/coin")
-    public ResponseEntity<?>updateCoin(@PathVariable Long id,@RequestBody Integer coin){
+    public ResponseEntity<?> updateCoin(@PathVariable Long id,@RequestBody Integer coin){
         gameService.updateCoinPrice(id, coin);
+        return ResponseEntity.noContent().build();
+    }
+    @PatchMapping("/{id:[0-9]+}/imageUrl")
+    public ResponseEntity<?> updateImageUrl(@PathVariable Long id,@RequestBody String imageUrl){
+        gameService.updateImageUrl(id, imageUrl);
         return ResponseEntity.noContent().build();
     }
 

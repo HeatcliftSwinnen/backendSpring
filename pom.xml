@@ -18,40 +18,65 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+        <!-- Commentaire : Cette dépendance est utilisée pour intégrer la documentation OpenAPI (Swagger) à votre application Spring Boot. Elle permet de générer une interface user pour explorer la documentation de l'API de votre application. -->
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+        <!-- Commentaire : Cette dépendance facilite l'intégration de Spring Data JPA, ce qui permet de simplifier l'accès et la manipulation des données en utilisant la technologie Java Persistence API (JPA). Elle fournit également des configurations de base pour les bases de données. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
+        <!-- Commentaire : Cette dépendance fournit des fonctionnalités de validation des données dans votre application Spring Boot. Elle vous permet de définir des contraintes de validation pour les objets de domaine. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <!-- Commentaire : Cette dépendance simplifie la création d'applications web en utilisant Spring Boot. Elle inclut des composants pour le développement d'API REST et de pages web. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+        <!-- Commentaire : Ces dépendances sont principalement destinées au développement. spring-boot-devtools fournit des outils pour le rechargement automatique de l'application pendant le développement, tandis que spring-boot-configuration-processor génère des métadonnées de configuration pour faciliter la configuration de l'application. -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
+        <!--Commentaire : Cette dépendance fournit le pilote JDBC pour la base de données PostgreSQL. Elle permet à votre application de se connecter à une base de données PostgreSQL. -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!-- Commentaire : Cette dépendance est facultative et permet de simplifier le code Java en générant automatiquement du code répétitif, comme les getters, les setters, et les constructeurs, en utilisant des annotations. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- Commentaire : Cette dépendance est utilisée pour faciliter le développement de tests unitaires et d'intégration pour votre application Spring Boot. Elle fournit des outils et des bibliothèques pour écrire et exécuter des tests. -->
+
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>4.4.0</version>
+        </dependency>
+        <!-- Commentaire : Cette dépendance fournit des fonctionnalités pour travailler avec JSON Web Tokens (JWT) en Java. Elle permet de créer, valider et manipuler des tokens JWT, souvent utilisés pour l'authentification et l'autorisation dans les applications. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <!-- Commentaire : Cette dépendance facilite l'intégration de Spring Security dans votre application Spring Boot. Spring Security est utilisé pour gérer la sécurité, l'authentification et l'autorisation des utilisateurs. -->
     </dependencies>
+
 
     <build>
         <plugins>

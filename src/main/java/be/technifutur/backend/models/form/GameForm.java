@@ -7,9 +7,12 @@ import be.technifutur.backend.validation.contraint.NameUnique;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import lombok.Data;
+
 import java.time.LocalDate;
 import java.util.Set;
 
+@Data
 public class GameForm {
 
     @NotBlank
@@ -29,6 +32,8 @@ public class GameForm {
     @Size(max = 500)
     private String description;
 
+    private String imageUrl;
+
     @NotNull
     private Studio studio;
 
@@ -42,6 +47,7 @@ public class GameForm {
         game.setPrice(this.price);
         game.setCoinPrice(this.coinPrice);
         game.setDescription(this.description);
+        game.setImageUrl(this.imageUrl);
         game.setStudio(this.studio);
         game.setTags(this.tags);
         return game;

@@ -15,7 +15,7 @@ public class UserDTO {
     private String lastName;
     private LocalDate birthDate;
     private String phoneNumber;
-    private String pseudo;
+    private String username;
     private String email;
     private Double moneyBalance;
     private Integer coinBalance ;
@@ -29,11 +29,10 @@ public class UserDTO {
                 .lastName(entity.getLastName())
                 .birthDate(entity.getBirthDate())
                 .phoneNumber(entity.getPhoneNumber())
-                .pseudo(entity.getPseudo())
+                .username(entity.getUsername())
                 .email(entity.getEmail())
                 .moneyBalance(entity.getMoneyBalance())
                 .coinBalance(entity.getCoinBalance())
                 .build();
-
     }
 }

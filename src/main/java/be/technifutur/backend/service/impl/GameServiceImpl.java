@@ -2,6 +2,7 @@ package be.technifutur.backend.service.impl;
 
 import be.technifutur.backend.exceptions.NotEnoughResourceException;
 import be.technifutur.backend.exceptions.ResourceNotFoundException;
+import be.technifutur.backend.models.dto.SmallGameDTO;
 import be.technifutur.backend.models.entity.Game;
 import be.technifutur.backend.repository.GameRepository;
 import be.technifutur.backend.service.GameService;
@@ -69,7 +70,15 @@ public class GameServiceImpl implements GameService {
     }
 
     @Override
+    public void updateImageUrl(Long id,String imageUrl) {
+        Game game =getOne(id);
+        game.setImageUrl(imageUrl);
+        gameRepository.save(game);
+    }
+
+    @Override
     public boolean isNameTaken(String name) {
         return gameRepository.existsByName(name);
     }
+
 }

@@ -32,11 +32,14 @@ public class Game {
     @Column(name = "game_price", nullable = false)
     private double price;
 
-    @Column(name = "game_price", nullable = false)
+    @Column(name = "game_coinprice", nullable = false)
     private Integer coinPrice;
 
     @Column(name = "game_description")
     private String description;
+
+    @Column(name = "game_image")
+    private String imageUrl;
 
     @ManyToOne
     @JoinColumn(name = "game_studio_id", nullable = false)

@@ -31,7 +31,7 @@ public class UserForm {
 
     @NotBlank
     @Size(min = 2,max = 30)
-    private String pseudo;
+    private String username;
 
     @NotBlank
     @EmailUnique
@@ -48,7 +48,7 @@ public class UserForm {
         user.setLastName(this.lastName);
         user.setBirthDate(this.birthDate);
         user.setPhoneNumber(this.phoneNumber);
-        user.setPseudo(this.pseudo);
+        user.setUsername(this.username);
         user.setEmail(this.email);
         user.setPassword(this.password);
         return user;
