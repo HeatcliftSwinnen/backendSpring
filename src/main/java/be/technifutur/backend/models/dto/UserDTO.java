@@ -1,6 +1,7 @@
 package be.technifutur.backend.models.dto;
 
 import be.technifutur.backend.models.entity.User;
+import be.technifutur.backend.models.enums.Role;
 import lombok.Builder;
 import lombok.Data;
 
@@ -19,6 +20,7 @@ public class UserDTO {
     private String email;
     private Double moneyBalance;
     private Integer coinBalance ;
+    private Role role;
 
     public static UserDTO toDTO(User entity){
         if(entity == null)
@@ -33,6 +35,7 @@ public class UserDTO {
                 .email(entity.getEmail())
                 .moneyBalance(entity.getMoneyBalance())
                 .coinBalance(entity.getCoinBalance())
+                .role(entity.getRole())
                 .build();
     }
 }
