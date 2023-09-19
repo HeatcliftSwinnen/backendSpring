@@ -81,7 +81,7 @@ public class WebSecurityConfig {
                         .requestMatchers(HttpMethod.POST ,  "/auth/register" ).permitAll()
                         .requestMatchers(HttpMethod.PATCH ,"auth/password").authenticated()
 
-                        //Examples: /** veut dire tout les liens
+                        //Examples: /** veut dire tout  liens
 //                        .requestMatchers( "/auth/login",  "/auth/register" ).permitAll()
 //                        .requestMatchers("/**").permitAll()
 //                        .requestMatchers("/**").hasAnyRole("USER", "ADMIN")
